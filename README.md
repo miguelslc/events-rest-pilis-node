@@ -1,44 +1,45 @@
-LINK HEROKU
+###LINK HEROKU
 
 https://murmuring-woodland-64875.herokuapp.com/
 
-router.get('/', eventsController.showEvents);
-router.get('/featured', eventsController.showEventsFeatured);
-router.get('/event/:id', eventsController.showEventDetailbyId);
-router.get('/shared/:id', eventsController.sharedEvents)
-router.post('/events', eventsController.addEvents);
+###API endpoints
 
-    router.post('/login', usersController.userLogin);
-    router.post('/register', usersController.userRegister);
-
-    router.get('/events', authController.userVerification, authController.showAuthEvents)
-
-API endpoints
-
-GET /
+`GET /`
 
 Retorna todos los eventos.
 
-GET /featured
+---
+
+`GET /featured`
 
 Retorna todos los eventos destacados
 
-GET /event/:id
+---
+
+`GET /event/:id`
 
 Devuelve el detalles del evento con la id correspondiente.
 
-GET /shared/:id
+---
+
+`GET /shared/:id`
 
 Devuelve el estado para compartir en una red social con su correspondiente id
 
-POST /events/
+---
+
+`POST /events/`
 
 Agrega un evento
 
-POST /login
+---
+
+`POST /login`
 
 Inicia sesion
 
-GET /events
+---
+
+`GET /events`
 
 Muestra una lista de eventos, pero solo son accedidos mediante token generado por el login
